@@ -1,0 +1,22 @@
+#page {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    border: 2px solid gold;
+    background-color: gray;
+}
+
+#page h1 {
+    text-emphasis: italic;
+    text-align: center;
+}
+
+#content .my-favorite-food {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#item {
+    list-style: none;
+}
