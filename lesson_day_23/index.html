@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice with Positions</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id = "circle"></div>
+        <div id = "square"></div>
+        <div id = "triangle"></div>
+        
+        
+        <script>
+
+            console.log(document.getElementsByTagName("body"));
+            var circleElement = document.getElementById("circle");
+            var squareElement = document.getElementById("square");
+            var triangleElement = document.getElementById("triangle");
+            
+            
+
+            
+            var windowHeight = window.innerHeight;
+            console.log(windowHeight);
+            circleElement.setAttribute("style", "position:absolute; bottom:200px");
+            squareElement.setAttribute("style", "position:absolute");
+            triangleElement.setAttribute("style", "position:absolute");
+            
+        </script>
+    </body>
+</html>

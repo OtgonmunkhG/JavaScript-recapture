@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #textbox {
+            margin: 10px;
+            border: 1px solid black;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='keyboard'>
+    </div>
+
+    <div id='textbox'>
+    </div>
+</body>
+<script>
+    var keyboardElement = document.getElementById("keyboard");
+    var textBoxElement = document.getElementById("textbox");
+
+    //create function makeButton
+
+        
+    var listOfLetter = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\", "a", "s", "d", "f", "g", "h", "j", "k", "l", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
+
+    
+        function start() {
+
+            for (let i = 0; i < listOfLetter.length; i++) {
+                makeButton(listOfLetter[i]);
+            }
+
+        }
+        
+        function makeButton(letter) {
+            var newBtn = document.createElement("button");
+            newBtn.innerHTML = letter;
+            keyboardElement.appendChild(newBtn);
+            newBtn.addEventListener("click", function() {
+                clicked(letter);
+            })
+
+        }
+        
+        function clicked(letter) {
+            textBoxElement.innerHTML += letter;
+            console.log(letter);
+        }
+        
+        start();
+
+    //call makeButton twice to test.
+</script>
+
+</html>
