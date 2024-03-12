@@ -1,19 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function Simple ()  {
+export default function Simple() {
     const URL = 'https://api.artic.edu/api/v1/artworks/search?q=cats';
+    const [data, setData] = useState([]);
 
-    useEffect( () => {
+    useEffect(() => {
         fetch(URL)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data.data)
-        })
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data.data);
+            })
     }, [])
-
-    return(
+    return (
         <div>
-
+            {
+                data && data.map((item, index) => {
+                    return (
+                        <div key={index}>
+                            <h1>{item.title}</h1>
+                            
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }

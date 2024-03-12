@@ -4,7 +4,6 @@ export default function Timer() {
     const [count, setCount] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
 
-
     useEffect(() => {
         let intervalId;
         if (isRunning) {
@@ -14,8 +13,6 @@ export default function Timer() {
         }
         return () => clearInterval(intervalId);
     }, [isRunning])
-
-
 
     function handleClick() {
         setIsRunning(!isRunning);
