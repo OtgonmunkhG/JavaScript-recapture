@@ -1,24 +1,30 @@
 import { useEffect, useState } from "react";
 
 export default function Timer() {
-    const [count, setCount] = useState(null);
+    const [count, setCount] = useState(0);
+    const [isRunning, setIsRunning] = useState(false);
 
 
     useEffect(() => {
-        setInterval(() => {
-            handleClick()
-        }, 1000);    }, [])
+        let intervalId;
+        if (isRunning) {
+            intervalId = setInterval(() => {
+                setCount(prevCount => prevCount + 1);
+            }, 1000);
+        }
+        return () => clearInterval(intervalId);
+    }, [isRunning])
 
-    
+
 
     function handleClick() {
-        setCount(count + 1)
+        setIsRunning(!isRunning);
     }
     console.log(count)
     return (
         <div>
-            <button className="border-1 rounded-xl"  >Start</button>
-            <div>{count}</div>            
+            <button className="border-1 rounded-xl" onClick={handleClick} >{isRunning ? 'Stop' : 'Start'}</button>
+            <div>{count}</div>
         </div>
     )
 }
