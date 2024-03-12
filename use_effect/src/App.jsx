@@ -5,11 +5,11 @@ import Timer from "./components/Timer"
 function App() {
 
   return (
-    <>
-     <h1 className="bg-sky-300 text-center text-3xl">Hello</h1>
+    <div className="h-69 bg-sky-300">
+     <h1 className="bg-violet-300	 text-center text-3xl">Hello</h1>
      <Simple />
      <Timer />
-    </>
+    </div>
   )
 }
 

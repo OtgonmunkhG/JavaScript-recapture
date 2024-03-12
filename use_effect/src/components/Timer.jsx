@@ -22,9 +22,9 @@ export default function Timer() {
     }
     console.log(count)
     return (
-        <div>
-            <button className="border-1 rounded-xl" onClick={handleClick} >{isRunning ? 'Stop' : 'Start'}</button>
-            <div>{count}</div>
+        <div className="mt-2 text-center">
+            <button className="border-1 rounded-xl bg-emerald-300 p-4" onClick={handleClick} >{isRunning ? 'Stop' : 'Start'}</button>
+            <div className="p-4">{count}</div>
         </div>
     )
 }
