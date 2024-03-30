@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            text-transform: uppercase;
+            text-decoration: line-through;
+            text-transform: capitalize;
+        }
+     
+        a:visited {
+            color: rgb(20, 214, 20);
+            text-decoration-color:hotpink ;
+        }
+        .p {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+        .container {
+            background-color: blue;
+            border: 5px cadetblue dashed;
+            padding: 20px;
+        }
+
+        .context {
+            background-color: peachpuff;
+            padding: 20px;
+        }
+        .context div {
+            padding: 5px;
+        }
+    
+        .second {
+            text-align: end;
+        }
+
+        .first, .third{
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+        }
+        .second {
+            border-right: 1px black solid;
+            border-bottom: 1px black solid;
+        }
+
+        .shadow {
+            width: 300px;
+            height: 200px;
+            background-color: lightsteelblue;
+            box-shadow: 10px 5px 8px red;
+        }
+        li {
+            list-style: url("https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/2b50.png");
+            /* line-height: ; */
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatibus aliquid nam pariatur doloribus beatae vel exercitationem odio. Porro perferendis necessitatibus quibusdam eum aliquid, est sit possimus? Architecto, porro? Quaerat?</p>
+    <a href="https://google.com" target="_blank">google</a>
+    <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quisquam debitis totam, recusandae consequatur neque. Natus in omnis cumque nobis aperiam minima quae cupiditate quos error commodi consectetur, quo vero!</p>
+
+    <div class="container">
+        <div class="content">
+            some content
+        </div>
+    </div>
+
+    <div class="context">
+        <div class="first">
+            year 2023
+        </div>
+        <div class="second">
+            Year 2022
+        </div>
+        <div class="third">
+            year 2021
+        </div>
+        <div class="second">
+            Year 2020
+        </div>
+
+    </div>
+
+    <div class="shadow">
+
+    </div>
+
+    <div class="image">
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+    </div>
+</body>
+</html>
