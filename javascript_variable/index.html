@@ -27,6 +27,66 @@
 
         const test = 0.88988
         console.log(Math.round(test))
+        boundary = 3;
+        pactral = 1;
+        for (let i = 1; i <= boundary; i++) {
+            console.log(i)
+            pactral = pactral * i;
+        }
+        console.log(pactral)
+
+        number = 2;
+        sum = 0;
+        for (let i = number; i <= boundary; i++) {
+            sum = sum + i;
+        }
+        console.log(sum);
+        lists = [23, 56, 98, 124];
+        sumTwo = 0;
+        for (let i = 0; i <= lists.length; i++) {
+            if (lists[i] >= 50) {
+                sumTwo = sumTwo + lists[i];
+            }
+        }
+        // console.log(sumTwo)
+
+        // Fibonacci
+
+        number_fib_one = 0;
+        number_fib_two = 1;
+        number_finall = 8;
+        sum = 0;
+        if (number_finall === 0) {
+            console.log(number_fib_one);
+        } else if (number_finall === 1) {
+            console.log(number_fib_two);
+        } else {
+            for (let i = 3; i <= number_finall; i++) {
+                sum = number_fib_one + number_fib_two;
+                number_fib_one = number_fib_two;
+                number_fib_two = sum;
+                // console.log(number_fib_two)
+            }
+
+        }
+
+        changable_number = '1234';
+        const_number = 984;
+        reversed_box = [];
+        counter = 0
+        function reversed(num) {
+            if (const_number / 10 != 0) {
+                counter++
+            }
+            console.log(Math.floor(num / 100))
+
+            // const duration = 
+
+        }
+
+
+
+        reversed(const_number);
 
     </script>
 </body>
