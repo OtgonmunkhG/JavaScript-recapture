@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="ice-cream">
+            Choose an ice cream flavor:
+        </label>
+
+        <select class="ice-cream" name="ice-cream">
+            <option value="">Select One …</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="sardine">Sardine</option>
+            <option value="vanilla">Vanilla</option>
+        </select>
+
+
+
+        <button style="background-color: aqua;">Submit</button>
+    </form>
+
+    <form action="">
+        <label for="name"></label>
+    </form>
+
+    <script>
+        selects = document.getElementsByClassName("ice-cream");
+        options = document.getElementsByTagName("option");
+        button = document.getElementsByTagName("button");
+        console.log(button[0])
+
+        selects[0].addEventListener("change", (event) => {
+
+            console.log(event);
+            console.log(event.target.value)
+            console.log(event.target.value == '')
+            if (event.target.value == '') {
+                console.log("something")
+                button[0].style.background = 'red';
+            }
+            else if (event.target.value != 'chocolate') {
+                button[0].setAttribute('class', "red")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

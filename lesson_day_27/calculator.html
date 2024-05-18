@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1>
+        JS Calculator
+    </h1>
+    <input type="number" placeholder="0">
+    <input type="number" placeholder="0">
+
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+
+    <script>
+        btn = document.getElementsByTagName("button");
+        input = document.getElementsByTagName("input");
+        bdy = document.body;
+        console.log(bdy);
+        var btnValue = '';
+        var result = 0;
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", (e) => {
+                btnValue = btn[i].innerHTML;
+                appearElement = document.createElement("div");
+                if (btnValue == '*') {
+                    result = input[0].value * input[1].value;
+                } else if (btnValue == '/') {
+                    result = input[0].value / input[1].value;
+                } else if (btnValue == '+') {
+                    result = input[0].value + input[1].value;
+                    console.log(typeof (input[0].value))
+                } else {
+                    result = input[0].value - input[1].value;
+                }
+                appearElement.innerHTML = result;
+                bdy.appendChild(appearElement);
+
+            })
+        }
+
+        console.log(btnValue);
+    </script>
+
+</body>
+
+</html>
